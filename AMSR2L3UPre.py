@@ -30,7 +30,7 @@ class AMSR2L3UPre(object):
         '''
         # WGS84
         srs_src = NSR(4326)
-        # WGS 84 / NSIDC Sea Ice Polar Stereographic
+        # NSIDC Sea Ice Polar Stereographic
         srs_dst = NSR(3411)
         src_points = (x, y)
         if inverse:
@@ -87,10 +87,7 @@ class AMSR2L3UPre(object):
         srs = NSR(3411)
         dst_ds.SetProjection(srs.ExportToWkt())
         dst_ds.SetGeoTransform([origin_x, self.gsd, 0, origin_y, 0, -self.gsd])
-        # img_uint8 = get_uint8_image(dst_value, None, None, 1, 99)
-        # dst_ds.WriteRaster(0, 0, img_width, img_height, img_uint8.tostring())
-        # dst_ds = None
-        # return dst_value
+
         band1 = dst_ds.GetRasterBand(1)
         band1.WriteArray(sub_nh_89h)
         band2 = dst_ds.GetRasterBand(2)
