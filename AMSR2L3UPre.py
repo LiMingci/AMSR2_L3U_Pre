@@ -22,7 +22,7 @@ class AMSR2L3UPre(object):
 
     def proj_to_nsidc_sea_ice_stere_n(self, x, y, inverse=False):
         '''
-
+        获得NSIDC Sea Ice Polar Stereographic投影下的坐标
         :param x: 1D array -->lon
         :param y: 1D array -->lat
         :param iinverse:
@@ -42,8 +42,8 @@ class AMSR2L3UPre(object):
 
     def reproj_roi(self, out_path, lonw, lone, lats, latn):
         '''
+        根据给定的经纬度方位裁剪AMSR2 L3 数据
         :param out_path:
-        :param gsd:
         :param lonw:
         :param lone:
         :param lats:
