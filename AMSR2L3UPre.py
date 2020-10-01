@@ -1,3 +1,7 @@
+# Name:    AMSR2_L3U_Pre.py
+# Purpose: clip AMSR2 L3 base border
+# Created:      LiMingci at 2020.08.15
+# Modification:
 import numpy as np
 import h5py
 from osgeo import gdal
